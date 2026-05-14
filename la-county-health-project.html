@@ -109,6 +109,112 @@
       color: #aaa;
       font-size: 14px;
     }
+    /* Theme Toggle Button */
+.theme-toggle {
+  background-color: #c44545;
+  color: #f5f0e8;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #e06b6b;
+  transform: translateY(-2px);
+}
+
+/* Custom Cursor: Dark Mode */
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='5' fill='%23c44545' stroke='%23f5f0e8' stroke-width='1.2'/%3E%3C/svg%3E") 9 9, auto;
+}
+
+/* Keep links/buttons clickable */
+a, button, .button-link, .theme-toggle {
+  cursor: pointer;
+}
+
+/* Light Mode: Cream + Emerald */
+body.light-mode {
+  background-color: #f7f1e4;
+  color: #1d2b24;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='5' fill='%230f6b4f' stroke='%23fffaf0' stroke-width='1.2'/%3E%3C/svg%3E") 9 9, auto;
+}
+
+body.light-mode header {
+  background: radial-gradient(circle at top, #fffaf0 0%, #efe4cf 50%, #e5d7bd 100%);
+}
+
+body.light-mode main {
+  background-color: #f7f1e4;
+}
+
+body.light-mode .card {
+  background-color: #fffaf0;
+  border-color: #cdbf9f;
+  box-shadow: 0 8px 20px rgba(29, 43, 36, 0.08);
+}
+
+body.light-mode .card:hover {
+  border-color: #0f6b4f;
+  box-shadow: 0 8px 22px rgba(15, 107, 79, 0.18);
+}
+
+body.light-mode h1,
+body.light-mode h3 {
+  color: #1d2b24;
+}
+
+body.light-mode h2 {
+  color: #0f6b4f;
+}
+
+body.light-mode h2::after {
+  background-color: #0f6b4f;
+}
+
+body.light-mode p,
+body.light-mode li {
+  color: #1d2b24;
+}
+
+body.light-mode a {
+  color: #0f6b4f;
+}
+
+body.light-mode a:hover {
+  color: #0a4d39;
+}
+
+body.light-mode footer {
+  color: #3f5f50;
+}
+
+body.light-mode .tag {
+  background-color: #e7f0e8;
+  color: #1d2b24;
+  border-color: #b8cdbd;
+}
+
+body.light-mode .button-link,
+body.light-mode .theme-toggle {
+  background-color: #0f6b4f;
+  color: #fffaf0;
+}
+
+body.light-mode .button-link:hover,
+body.light-mode .theme-toggle:hover {
+  background-color: #0a4d39;
+  text-decoration: none;
+}
+
+body.light-mode .project-preview {
+  border-color: #cdbf9f;
+}
   </style>
 </head>
 
@@ -117,6 +223,7 @@
     <p><a href="index.html">← Back to Portfolio</a></p>
     <h1>Health and Social Need Indicators Across Selected Los Angeles County Places</h1>
     <p>Excel dashboard using CDC PLACES age-adjusted adult prevalence estimates</p>
+      <button id="theme-toggle" class="theme-toggle">☀ Light Mode</button>
   </header>
 
   <main>
@@ -232,5 +339,18 @@
     <p>Public health data, policy communication, and systems thinking.</p>
     <p>© 2026 Dalilah Garcia</p>
   </footer>
+  <script>
+  const toggleButton = document.getElementById("theme-toggle");
+
+  toggleButton.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      toggleButton.textContent = "☾ Dark Mode";
+    } else {
+      toggleButton.textContent = "☀ Light Mode";
+    }
+  });
+</script>
 </body>
 </html>
