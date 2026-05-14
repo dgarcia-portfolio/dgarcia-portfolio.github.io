@@ -1,1 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LA County Health Indicators Project | Dalilah Garcia</title>
 
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #111111;
+      color: #f5f0e8;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 50px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #2a1a1a 0%, #1a1a1a 45%, #111111 100%);
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, 'Times New Roman', serif;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #c44545;
+      margin-top: 40px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #c44545;
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+
+    main {
+      max-width: 950px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: #1f1f1f;
+      border: 1px solid #333333;
+      padding: 24px;
+      margin: 22px 0;
+      border-radius: 12px;
+    }
+
+    .project-preview {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 12px;
+      margin: 20px 0;
+      border: 1px solid #333333;
+    }
+
+    a {
+      color: #e06b6b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .button-link {
+      display: inline-block;
+      background-color: #c44545;
+      color: #f5f0e8;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin: 8px 6px 0 0;
+      text-decoration: none;
+    }
+
+    .button-link:hover {
+      background-color: #e06b6b;
+      text-decoration: none;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #2a2a2a;
+      color: #f5f0e8;
+      border: 1px solid #444;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin: 4px 4px 4px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p><a href="index.html">← Back to Portfolio</a></p>
+    <h1>Health and Social Need Indicators Across Selected Los Angeles County Places</h1>
+    <p>Excel dashboard using CDC PLACES age-adjusted adult prevalence estimates</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>
+        This project explores selected adult health and social need indicators across selected Los Angeles County places using CDC PLACES data. The goal was to practice cleaning public health data, creating pivot tables and charts, and communicating findings in a dashboard format.
+      </p>
+
+      <p>
+        <span class="tag">Excel</span>
+        <span class="tag">Pivot Tables</span>
+        <span class="tag">Pivot Charts</span>
+        <span class="tag">Dashboard Design</span>
+        <span class="tag">Public Health Data</span>
+      </p>
+
+      <p>
+        <a href="la-county-health-social-need-indicators-dashboard.pdf" target="_blank" class="button-link">Download Dashboard PDF</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Dashboard Preview</h2>
+      <img src="la-county-health-png.png" alt="Preview of LA County health and social need indicators dashboard" class="project-preview">
+    </section>
+
+    <section class="card">
+      <h2>Research Question</h2>
+      <p>
+        How do selected adult health and social need indicators vary across selected Los Angeles County places?
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Data Source</h2>
+      <p>
+        Data came from CDC PLACES, 2025 release. The analysis focused on selected Los Angeles County places and adult population age 18 years and older.
+      </p>
+
+      <p>
+        Measures included diagnosed diabetes, no leisure-time physical activity, frequent mental distress, obesity, and food stamp receipt in the past 12 months.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Methods</h2>
+      <p>
+        I filtered the dataset to selected Los Angeles County places, selected adult population and five health/social need indicators, and used age-adjusted prevalence estimates for health indicator comparisons. I created a cleaned dataset with one row per selected place, then used pivot tables and pivot charts to compare each indicator by location.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Key Findings</h2>
+      <p>
+        Compton showed higher estimates across multiple selected indicators, including diagnosed diabetes, obesity, frequent mental distress, and food stamp receipt.
+      </p>
+      <p>
+        El Monte and Compton ranked higher for physical inactivity compared with several other selected places.
+      </p>
+      <p>
+        Santa Monica showed lower estimates across several indicators, including diabetes, obesity, physical inactivity, and food stamp receipt.
+      </p>
+      <p>
+        Food stamp receipt varied widely across places, highlighting differences in social and economic need among selected communities.
+      </p>
+      <p>
+        Population size alone did not explain indicator patterns, which is why prevalence estimates are useful for place-to-place comparison.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Spotlight Analysis</h2>
+      <p>
+        The spotlight comparisons show why both prevalence and population size are important in public health analysis. Larger cities may represent a greater total number of affected residents, but smaller cities can show higher proportional burden.
+      </p>
+
+      <p>
+        For example, Los Angeles had a much larger adult population than Compton, but Compton showed a higher diagnosed diabetes prevalence estimate. This suggests that Los Angeles may have a larger total number of adults affected because of its population size, while Compton may experience a greater proportional diabetes burden among adults.
+      </p>
+
+      <p>
+        The analysis also compared food stamp receipt and physical inactivity across selected places to show how health indicators can be interpreted alongside social and economic context.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Limitations</h2>
+      <p>
+        This project is exploratory and does not establish causation. CDC PLACES values are modeled estimates and should not be interpreted as direct clinical counts. The selected locations do not represent all communities in Los Angeles County.
+      </p>
+
+      <p>
+        Age-adjusted prevalence estimates help compare places with different age distributions, but they do not account for all differences between communities, such as income, race/ethnicity, immigration status, healthcare access, neighborhood environment, transportation, or local policy conditions.
+      </p>
+
+      <p>
+        Food stamp receipt is included as a social needs indicator, but it is not the same as food insecurity. Higher food stamp receipt may reflect greater economic need, stronger program participation, or both.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Skills Demonstrated</h2>
+      <p>
+        <span class="tag">Public Dataset Cleaning</span>
+        <span class="tag">Indicator Selection</span>
+        <span class="tag">Pivot Table Analysis</span>
+        <span class="tag">Data Visualization</span>
+        <span class="tag">Dashboard Design</span>
+        <span class="tag">Public Health Interpretation</span>
+        <span class="tag">Documentation of Limitations</span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Public health data, policy communication, and systems thinking.</p>
+    <p>© 2026 Dalilah Garcia</p>
+  </footer>
+</body>
+</html>
