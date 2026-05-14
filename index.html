@@ -11,12 +11,11 @@
       padding: 0;
       line-height: 1.6;
     }
-
     header {
-      padding: 60px 20px;
-      text-align: center;
-      background-color: #1a1a1a;
-    }
+  padding: 70px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #2a1a1a 0%, #1a1a1a 45%, #111111 100%);
+}
     
     h1, h2, h3 {
       font-family: Georgia, 'Times New Roman', serif;
@@ -51,6 +50,11 @@
       margin: 20px 0;
       border-radius: 12px;
     }
+    .card:hover {
+  transform: translateY(-3px);
+  border-color: #c44545;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
 
     a {
       color: #e06b6b;
@@ -88,6 +92,29 @@
       border: 3px solid #c44545;
       margin-bottom: 20px;
     }
+    .tag {
+  display: inline-block;
+  background-color: #2a2a2a;
+  color: #f5f0e8;
+  border: 1px solid #444;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin: 4px 4px 4px 0;
+}
+    .quote-box {
+  border-left: 4px solid #c44545;
+  background-color: #1a1a1a;
+  padding: 18px 22px;
+  margin: 25px 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #d8d2c4;
+  font-size: 18px;
+}
+    .featured-card {
+  border: 1px solid #c44545;
+  background: linear-gradient(135deg, #1f1f1f, #181818);
+}
   </style>
 </head>
 
@@ -113,12 +140,17 @@
   shapes the way I approach public health data: not just as numbers, but as evidence connected to
   real communities, systems, and decisions.
       </p>
+      <div class="quote-box">
+  <p>
+    “I’m interested in how public health data, policy, and documentation shape the way communities are understood and served.”
+  </p>
+</div>
     </section>
 
     <section>
       <h2>Data Projects</h2>
 
-<div class="card">
+<div class="card featured-card">
   <h3>Health and Social Need Indicators Across Selected Los Angeles County Places</h3>
 
   <img src="la-county-health-png.png" alt="Preview of Excel dashboard showing health and social need indicators across selected Los Angeles County places" style="width:100%; border-radius:12px; margin:15px 0;">
@@ -129,7 +161,14 @@
 
   <p><strong>Tools:</strong> Excel, pivot tables, pivot charts, dashboard design</p>
 
-  <p><strong>Skills:</strong> Public dataset cleaning, health indicator analysis, data visualization, public health interpretation, and project documentation</p>
+  <p><strong>Skills:</strong><p>
+    <p>
+  <span class="tag">Excel</span>
+  <span class="tag">Pivot Tables</span>
+  <span class="tag">Pivot Charts</span>
+  <span class="tag">Dashboard Design</span>
+  <span class="tag">Public Health Data</span>
+</p>
 
   <p>
     <a href="la-county-health-social-need-indicators-dashboard.pdf" target="_blank">View dashboard PDF</a>
@@ -187,8 +226,9 @@
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Dalilah Garcia</p>
-  </footer>
+ <footer>
+  <p>Built with Excel, GitHub Pages, and a healthy suspicion of messy systems.</p>
+  <p>© 2026 Dalilah Garcia</p>
+</footer>
 </body>
 </html>
