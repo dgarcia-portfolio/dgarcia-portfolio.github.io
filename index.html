@@ -215,6 +215,47 @@ body.light-mode .button-link:hover,
 body.light-mode .theme-toggle:hover {
   background-color: #0a4d39;
 }
+    /* Featured project card */
+.featured-card {
+  border: 1px solid #c44545;
+  background: linear-gradient(135deg, #1f1f1f, #181818);
+}
+
+/* Featured project card in light mode */
+body.light-mode .featured-card {
+  background: linear-gradient(135deg, #fffaf0, #f1eadb);
+  border-color: #0f6b4f;
+  box-shadow: 0 8px 22px rgba(15, 107, 79, 0.15);
+}
+
+body.light-mode .featured-card h3 {
+  color: #1d2b24;
+}
+
+body.light-mode .featured-card p {
+  color: #1d2b24;
+}
+
+body.light-mode .featured-card strong {
+  color: #0f6b4f;
+}
+
+body.light-mode .featured-card img {
+  border: 1px solid #cdbf9f;
+}
+    .project-preview {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  margin: 15px 0;
+  border: 1px solid #333333;
+}
+
+body.light-mode .project-preview {
+  border-color: #cdbf9f;
+}
   </style>
 </head>
 
@@ -254,8 +295,7 @@ body.light-mode .theme-toggle:hover {
 <div class="card featured-card">
   <h3>Health and Social Need Indicators Across Selected Los Angeles County Places</h3>
 
-  <img src="la-county-health-png.png" alt="Preview of Excel dashboard showing health and social need indicators across selected Los Angeles County places" style="width:100%; border-radius:12px; margin:15px 0;">
-
+<img src="la-county-health-png.png" alt="Preview of Excel dashboard showing health and social need indicators across selected Los Angeles County places" class="project-preview">
   <p>
     An Excel dashboard using CDC PLACES data to compare selected adult health and social need indicators across selected Los Angeles County places, including diagnosed diabetes, physical inactivity, frequent mental distress, obesity, and food stamp receipt.
   </p>
