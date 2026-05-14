@@ -256,6 +256,20 @@ body.light-mode .featured-card img {
 body.light-mode .project-preview {
   border-color: #cdbf9f;
 }
+    /* Custom Cursor: Dark Mode */
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 L22 12 L12 22 L2 12 Z' fill='%23c44545' stroke='%23f5f0e8' stroke-width='1.5'/%3E%3C/svg%3E") 12 12, auto;
+}
+
+/* Keep links/buttons obviously clickable */
+a, button, .button-link, .theme-toggle {
+  cursor: pointer;
+}
+
+/* Custom Cursor: Light Mode */
+body.light-mode {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 L22 12 L12 22 L2 12 Z' fill='%230f6b4f' stroke='%23fffaf0' stroke-width='1.5'/%3E%3C/svg%3E") 12 12, auto;
+}
   </style>
 </head>
 
