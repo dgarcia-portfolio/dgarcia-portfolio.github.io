@@ -115,6 +115,106 @@
   border: 1px solid #c44545;
   background: linear-gradient(135deg, #1f1f1f, #181818);
 }
+    .theme-toggle {
+  background-color: #c44545;
+  color: #f5f0e8;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #e06b6b;
+  transform: translateY(-2px);
+}
+
+/* Light Mode: Cream + Emerald */
+body.light-mode {
+  background-color: #f7f1e4;
+  color: #1d2b24;
+}
+
+body.light-mode header {
+  background: radial-gradient(circle at top, #fffaf0 0%, #efe4cf 50%, #e5d7bd 100%);
+}
+
+body.light-mode .card {
+  background-color: #fffaf0;
+  border-color: #cdbf9f;
+  box-shadow: 0 8px 20px rgba(29, 43, 36, 0.08);
+}
+
+body.light-mode .card:hover {
+  border-color: #0f6b4f;
+  box-shadow: 0 8px 22px rgba(15, 107, 79, 0.18);
+}
+
+body.light-mode h1,
+body.light-mode h3 {
+  color: #1d2b24;
+}
+
+body.light-mode h2 {
+  color: #0f6b4f;
+}
+
+body.light-mode h2::after {
+  background-color: #0f6b4f;
+}
+
+body.light-mode .tagline {
+  color: #3f5f50;
+}
+
+body.light-mode a {
+  color: #0f6b4f;
+}
+
+body.light-mode a:hover {
+  color: #0a4d39;
+}
+
+body.light-mode footer {
+  color: #3f5f50;
+}
+
+body.light-mode .quote-box {
+  background-color: #fffaf0;
+  color: #2d463a;
+  border-left-color: #0f6b4f;
+}
+
+body.light-mode .tag {
+  background-color: #e7f0e8;
+  color: #1d2b24;
+  border-color: #b8cdbd;
+}
+
+body.light-mode .initials-icon {
+  background-color: #fffaf0;
+  color: #0f6b4f;
+  border-color: #0f6b4f;
+}
+
+body.light-mode .profile-icon {
+  border-color: #0f6b4f;
+}
+
+body.light-mode .button-link,
+body.light-mode .theme-toggle {
+  background-color: #0f6b4f;
+  color: #fffaf0;
+}
+
+body.light-mode .button-link:hover,
+body.light-mode .theme-toggle:hover {
+  background-color: #0a4d39;
+}
   </style>
 </head>
 
@@ -129,6 +229,7 @@
   <a href="https://www.linkedin.com/in/delizag02/" target="_blank">LinkedIn</a> |
   <a href="mailto:delizag02@gmail.com">Email</a>
 </p>
+    <button id="theme-toggle" class="theme-toggle">☀ Light Mode</button>
   </header>
 
   <main>
@@ -230,5 +331,18 @@
   <p>Built with Excel, GitHub Pages, and a healthy suspicion of messy systems.</p>
   <p>© 2026 Dalilah Garcia</p>
 </footer>
+  <script>
+  const toggleButton = document.getElementById("theme-toggle");
+
+  toggleButton.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      toggleButton.textContent = "☾ Dark Mode";
+    } else {
+      toggleButton.textContent = "☀ Light Mode";
+    }
+  });
+</script>
 </body>
 </html>
