@@ -283,6 +283,45 @@ body.light-mode {
 .project-card-link .button-link {
   width: fit-content;
 }
+    .site-nav {
+  margin: 25px auto 15px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-nav a {
+  border: 1px solid #333333;
+  background-color: #1f1f1f;
+  color: #f5f0e8;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.site-nav a:hover {
+  border-color: #c44545;
+  background-color: #2a2a2a;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+    body.light-mode .site-nav a {
+  background-color: #fffaf0;
+  color: #0f6b4f;
+  border-color: #cdbf9f;
+}
+
+body.light-mode .site-nav a:hover {
+  background-color: #e7f0e8;
+  border-color: #0f6b4f;
+  color: #0a4d39;
+}
+    html {
+  scroll-behavior: smooth;
+}
   </style>
 </head>
 
@@ -298,11 +337,17 @@ body.light-mode {
   <a href="mailto:delizag02@gmail.com">Email</a>
 </p>
     <button id="theme-toggle" class="theme-toggle">☀ Light Mode</button>
+    <nav class="site-nav">
+  <a href="#about">About</a>
+  <a href="#data-projects">Data Projects</a>
+  <a href="#writing-samples">Writing Samples</a>
+  <a href="#contact">Contact</a>
+</nav>
   </header>
 
   <main>
-    <section>
-      <h2>About</h2>
+      <section id="about">
+  <h2>About</h2>
       <p>
           I am a public health graduate student and case aide who is building skills in health data analysis,
   policy communication, and program evaluation. My background in anthropology and social services
@@ -316,8 +361,8 @@ body.light-mode {
 </div>
     </section>
 
-    <section>
-      <h2>Data Projects</h2>
+    <section id="data-projects">
+  <h2>Data Projects</h2>
 
 <a href="la-county-health-project.html" class="project-card-link">
   <div class="card featured-card">
@@ -354,32 +399,49 @@ body.light-mode {
       </div>
     </section>
 
-    <section>
-      <h2>Writing Samples</h2>
+    <section id="writing-samples">
+  <h2>Writing Samples</h2>
+<section>
+  <h2>Writing Samples</h2>
 
-      <div class="card">
-        <h3>Policy Barriers Affecting Immigrant Health Access</h3>
-        <p>
-          A public health policy writing sample focused on immigrant health, access barriers,
-          and community-facing communication.
-        </p>
-        <p><em>Coming soon.</em></p>
-      </div>
+  <div class="card featured-card">
+    <h3>Access to Mental Health Services for Unaccompanied Immigrant Minors After ORR Release</h3>
+    <p>
+      A graduate-level public health policy analysis examining post-release access to trauma-informed mental health services for unaccompanied immigrant minors. The paper evaluates care coordination gaps, insurance barriers, provider capacity, and policy options to improve continuity of care.
+    </p>
+    <p>
+      <span class="tag">Policy Analysis</span>
+      <span class="tag">Immigrant Health</span>
+      <span class="tag">Mental Health Access</span>
+      <span class="tag">Health Equity</span>
+    </p>
+    <p>
+      <a href="policy-analysis-immigrant-mental-health-services.pdf" target="_blank" class="button-link">View Writing Sample</a>
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Environmental Health Advocacy Letter</h3>
-        <p>
-          A concise advocacy writing sample connecting environmental health concerns to local policy action.
-        </p>
-        <p><em>Coming soon.</em></p>
-      </div>
+  <div class="card">
+    <h3>Mental Health Access in Latino Communities: A Medical Anthropology Case Study</h3>
+    <p>
+      A medical anthropology case study exploring how cultural values, stigma, traditional healing, spirituality, language access, and structural barriers shape mental health care access in Latino communities.
+    </p>
+    <p>
+      <span class="tag">Medical Anthropology</span>
+      <span class="tag">Mental Health</span>
+      <span class="tag">Cultural Competency</span>
+      <span class="tag">Health Access</span>
+    </p>
+    <p>
+      <a href="mental-health-access-latino-communities.pdf" target="_blank" class="button-link">View Writing Sample</a>
+    </p>
+  </div>
+</section>
+     
     </section>
 
-    <section>
-      <h2>Connect with Me!</h2>
-      <p>
-        Resume: <em>Coming soon.</em>
-      </p>
+    <section id="contact">
+  <h2>Connect with Me</h2>
+
 <div class="card">
  
   <p>
