@@ -270,6 +270,19 @@ a, button, .button-link, .theme-toggle {
 body.light-mode {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 L22 12 L12 22 L2 12 Z' fill='%230f6b4f' stroke='%23fffaf0' stroke-width='1.5'/%3E%3C/svg%3E") 12 12, auto;
 }
+    .project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-link:hover {
+  text-decoration: none;
+}
+
+.project-card-link .button-link {
+  width: fit-content;
+}
   </style>
 </head>
 
@@ -306,30 +319,31 @@ body.light-mode {
     <section>
       <h2>Data Projects</h2>
 
-<div class="card featured-card">
-  <h3>Health and Social Need Indicators Across Selected Los Angeles County Places</h3>
+<a href="la-county-health-project.html" class="project-card-link">
+  <div class="card featured-card">
+    <h3>Health and Social Need Indicators Across Selected Los Angeles County Places</h3>
 
-<img src="la-county-health-png.png" alt="Preview of Excel dashboard showing health and social need indicators across selected Los Angeles County places" class="project-preview">
-  <p>
-    An Excel dashboard using CDC PLACES data to compare selected adult health and social need indicators across selected Los Angeles County places, including diagnosed diabetes, physical inactivity, frequent mental distress, obesity, and food stamp receipt.
-  </p>
+    <img src="la-county-health-png.png" alt="Preview of Excel dashboard showing health and social need indicators across selected Los Angeles County places" class="project-preview">
 
-  <p><strong>Tools:</strong> Excel, pivot tables, pivot charts, dashboard design</p>
-
-  <p><strong>Skills:</strong><p>
     <p>
-  <span class="tag">Excel</span>
-  <span class="tag">Pivot Tables</span>
-  <span class="tag">Pivot Charts</span>
-  <span class="tag">Dashboard Design</span>
-  <span class="tag">Public Health Data</span>
-</p>
+      An Excel dashboard using CDC PLACES data to compare selected adult health and social need indicators across selected Los Angeles County places, including diagnosed diabetes, physical inactivity, frequent mental distress, obesity, and food stamp receipt.
+    </p>
 
-  <p>
-    <a href="la-county-health-social-need-indicators-dashboard.pdf" target="_blank">View dashboard PDF</a>
-  </p>
-</div>
+    <p><strong>Tools:</strong> Excel, pivot tables, pivot charts, dashboard design</p>
 
+    <p><strong>Skills:</strong></p>
+
+    <p>
+      <span class="tag">Excel</span>
+      <span class="tag">Pivot Tables</span>
+      <span class="tag">Pivot Charts</span>
+      <span class="tag">Dashboard Design</span>
+      <span class="tag">Public Health Data</span>
+    </p>
+
+    <p class="button-link">View Project</p>
+  </div>
+</a>
       <div class="card">
         <h3>Environmental Health Indicator Analysis</h3>
         <p>
